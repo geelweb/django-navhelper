@@ -49,4 +49,4 @@ settings.py file the following piece of code
 By default the navactive and renavactive tags return an empty string for
 non-active entries. Change it using the following option
 
-   NAVHELPER_NOT_ACTIVE_CLASS = "your_not_active_class"
+    NAVHELPER_NOT_ACTIVE_CLASS = "your_not_active_class"
