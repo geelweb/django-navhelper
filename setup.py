@@ -29,17 +29,13 @@ if __name__ == "__main__":
         author_email=maintainer_email,
         maintainer=maintainer,
         maintainer_email=maintainer_email,
-        #url="https://github.com/geelweb/django-twitter-bootstrap-form",
-        #download_url="https://github.com/geelweb/django-twitter-bootstrap-form/tarball/0.2",
+        url="https://github.com/geelweb/django-navhelper",
+        download_url="https://github.com/geelweb/django-navhelper/tarball/%s" % __version__,
         license='MIT',
         namespace_packages = ['geelweb', 'geelweb.django'],
         packages=find_packages('src'),
         package_dir = {'':'src'},
-        package_data = {
-        #    'geelweb.django.twitter_bootstrap_form': [
-        #        'templates/twitter_bootstrap_form/*.html',
-        #        ],
-        },
+        package_data = {},
         keywords = ['django', 'menu', 'navigation'],
         )
 
