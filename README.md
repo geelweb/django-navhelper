@@ -1,5 +1,7 @@
 # Django navhelper
 
+Django template tags to add active class on navigation menus
+
 ## Installation
 
 From source
@@ -10,17 +12,24 @@ Using pip
 
     pip install django-navhelper
 
-Ensure "django.core.context_processors.request" is in
-"TEMPLATE_CONTEXT_PROCESSORS.
+*settings.py*
 
-Add "geelweb.django.navhelper" in our INSTALLED_APPS.
+Add `geelweb.django.navhelper` in our `INSTALLED_APPS`.
+
+Ensure `django.core.context_processors.request` is in `TEMPLATE_CONTEXT_PROCESSORS`. Make sure you keep the components required by the features of Django you wish to use, in doubt keep the default values https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-TEMPLATE_CONTEXT_PROCESSORS.
+
+*templates*
+
+Load the tags adding in your templates
+
+    {% load navactive %}
 
 ## Template tags
 
 ### navactive
 
-    Returns "active" if url name of the current request path is in the list of
-    view names
+Returns "active" if url name of the current request path is in the list of
+view names
 
     <li class="{% navactive request "view_name another_view_name" %}">
         <a href="{% url "view_name" }">Menu Entry</a>
@@ -29,7 +38,7 @@ Add "geelweb.django.navhelper" in our INSTALLED_APPS.
 
 ### renavactive
 
-    Returns "active" if the pattern is found in the request path
+Returns "active" if the pattern is found in the request path
 
     <li class="{% renavactive request "^/start_with_foo" %}">
         <a href="{% url "view_name" }">Menu Entry</a>
@@ -37,16 +46,17 @@ Add "geelweb.django.navhelper" in our INSTALLED_APPS.
 
 ## Options
 
+You can customize some options using settings
+
 *NAVHELPER_ACTIVE_CLASS*
 
-Default active class is "active", you can update it adding in your
-settings.py file the following piece of code
+Default: active
 
-    NAVHELPER_ACTIVE_CLASS = "your_active_class"
+The class name for active entries
 
 *NAVHELPER_NOT_ACTIVE_CLASS*
 
-By default the navactive and renavactive tags return an empty string for
-non-active entries. Change it using the following option
+Default: '' (Empty string)
 
-    NAVHELPER_NOT_ACTIVE_CLASS = "your_not_active_class"
+The class name for non-active entries
+
