@@ -17,7 +17,7 @@ from setuptools import setup, find_packages
 author_data = __author__.split(" ")
 maintainer = " ".join(author_data[0:-1])
 maintainer_email = author_data[-1]
-README = open(os.path.join(os.path.dirname(__file__), 'README.md')).read()
+README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 if __name__ == "__main__":
     setup(
