@@ -30,7 +30,9 @@ def navactive(request, urls):
     if resolved.namespaces:
         resolved_urls = resolved_urls.union(["{}:{}".format(namespace, resolved.url_name) for namespace in resolved.namespaces])
         resolved_urls = resolved_urls.union(["{}:".format(namespace) for namespace in resolved.namespaces])
-    if resolved.app_names:
+    if getattr(resolved, 'app_name', None):
+        resolved_urls = resolved_urls.union(["{}:{}".format(resolved.app_name, resolved.url_name), "{}:".format(resolved.app_name)])
+    if getattr(resolved, 'app_names', []):
         resolved_urls = resolved_urls.union(["{}:{}".format(app_name, resolved.url_name) for app_name in resolved.app_names])
         resolved_urls = resolved_urls.union(["{}:".format(app_name) for app_name in resolved.app_names])
     if url_list and resolved_urls and bool(resolved_urls & url_list):
