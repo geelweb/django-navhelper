@@ -8,8 +8,8 @@ Django template tags to add active class on navigation menus
 Prerequisites
 -------------
 
--  Django 1.6, 1.7, 1.8
--  Python 2.7, 3.2, 3.3, 3.4
+-  Django 1.6, 1.7, 1.8, 1.9, 1.10
+-  Python 2.7, 3.2, 3.3, 3.4, 3.5
 
 Installation
 ------------
@@ -48,7 +48,7 @@ of view names
 .. code-block:: html
 
     {% load navactive %}
-    <li class="{% navactive request "view_name another_view_name" %}">
+    <li class="{% navactive request "view_name app_name:another_view_name namespace:" %}">
         <a href="{% url "view_name" }">Menu Entry</a>
     </li>
 
