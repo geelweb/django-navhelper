@@ -1,13 +1,8 @@
 language: python
 python:
-  - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
+  - "3.10"
 env:
-  - DJANGO_VERSION=1.6
-  - DJANGO_VERSION=1.7
-  - DJANGO_VERSION=1.8
+  - DJANGO_VERSION=4.2
 install:
   - pip install -q Django==$DJANGO_VERSION --use-mirrors
 script: python tests/runtests.py
