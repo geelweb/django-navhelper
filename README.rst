@@ -31,11 +31,6 @@ Configure your Django installation
 
 Add ``geelweb.django.navhelper`` in your ``INSTALLED_APPS``.
 
-Ensure ``django.core.context_processors.request`` is in
-``TEMPLATE_CONTEXT_PROCESSORS``. Make sure you keep the components
-required by the features of Django you wish to use, in doubt keep the
-`default values`_.
-
 Template tags
 -------------
 
@@ -81,9 +76,6 @@ Default: '' (Empty string)
 
 The class name for non-active entries
 
-.. _default values: https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-TEMPLATE_CONTEXT_PROCESSORS
-
-.. |Build status| image:: https://travis-ci.org/geelweb/django-navhelper.svg?branch=master
 
 Run test suite
 --------------
@@ -94,3 +86,5 @@ To run the test suite, first, create and activate a virtual environment. Then in
 
         pip install Django==4.2
         python runtests.py
+
+.. |Build status| image:: https://github.com/geelweb/django-navhelper/actions/workflows/testsuite.yml/badge.svg
