@@ -1,5 +1,5 @@
 from django.template import Library
-from django.core.urlresolvers import resolve
+from django.urls import resolve
 from django.conf import settings
 import re
 
