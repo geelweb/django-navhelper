@@ -2,10 +2,9 @@
 import os
 import sys
 
-#DIRNAME = os.path.join(os.path.dirname(__file__))
+DIRNAME = os.path.join(os.path.dirname(__file__))
 
-#sys.path.append(DIRNAME)
-#sys.path.append(os.path.join(DIRNAME, 'src'))
+sys.path.append(os.path.join(DIRNAME, 'src'))
 
 
 import django
