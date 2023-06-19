@@ -8,8 +8,8 @@ Django template tags to add active class on navigation menus
 Prerequisites
 -------------
 
--  Django 1.6, 1.7, 1.8, 1.9, 1.10
--  Python 2.7, 3.2, 3.3, 3.4, 3.5
+-  Django 4.2
+-  Python 3.10
 
 Installation
 ------------
@@ -24,7 +24,7 @@ From PyPi
 
 .. code-block:: text
 
-    pip install django-navhelper
+    pip install django-navhelper==1.0
 
 Configure your Django installation
 ----------------------------------
@@ -84,3 +84,13 @@ The class name for non-active entries
 .. _default values: https://docs.djangoproject.com/en/1.6/ref/settings/#std:setting-TEMPLATE_CONTEXT_PROCESSORS
 
 .. |Build status| image:: https://travis-ci.org/geelweb/django-navhelper.svg?branch=master
+
+Run test suite
+--------------
+
+To run the test suite, first, create and activate a virtual environment. Then install some requirements and run the tests:
+
+.. code-block:: text
+
+        pip install Django==4.2
+        python runtests.py

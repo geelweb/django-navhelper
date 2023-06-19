@@ -8,6 +8,7 @@ DATABASES = {
 
 INSTALLED_APPS = [
     "geelweb.django.navhelper",
+    "tests",
 ]
 
 SITE_ID = 1
@@ -23,3 +24,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'tests.urls'
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    }
+]
